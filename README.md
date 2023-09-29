@@ -13,7 +13,7 @@ This project implements a digital clock using HTML, CSS, and JavaScript. It also
 
 ## Demo
 
-[View Demo](#) <!-- Add a link to your live demo if available -->
+[View Demo](https://digiclock-project.netlify.app/) <!-- Add a link to your live demo if available -->
 
 ## Features
 
