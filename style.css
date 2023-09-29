@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Monoton&display=swap');
+
+body {   
+    font-family: 'Anton', sans-serif;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: rgb(0, 0, 0); /* Grey background */
+    transition: background-color 0.3s;
+}
+
+.light-mode {
+    background-color: rgb(255, 255, 255); /* White background in light mode */
+}
+
+.clock-container {
+    text-align: center;
+    padding: 0 20px; /* Add padding to the sides */
+}
+
+.clock {
+    font-size: 250px;
+    color: #a9a9a9; /* Black font color */
+}
+
+@media screen and (max-width: 768px) {
+    .clock {
+        font-size: 150px; /* Adjust font size for smaller screens */
+    }
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.theme-toggle img{
+    width: 30px;
+}
