@@ -1,17 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Set character encoding and viewport for responsiveness -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title of the webpage -->
     <title>DigiClock</title>
+    
+    <!-- Link to the external stylesheet -->
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Shortcut icon for the webpage -->
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
 </head>
 <body>
+    <!-- Button for toggling themes -->
     <button class="theme-toggle" id="theme-toggle"><img src="theme.png" alt="theme"></button>
+    
+    <!-- Container for the clock -->
     <div class="clock-container" draggable=false>
+        <!-- Actual clock display -->
         <div class="clock" id="clock"></div>
     </div>
+    
+    <!-- Link to the external JavaScript file -->
     <script src="script.js"></script>
 </body>
 </html>
