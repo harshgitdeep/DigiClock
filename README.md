@@ -1,6 +1,6 @@
 # Digital Clock Project
 
-This project implements a digital clock using HTML, CSS, and JavaScript. It also includes a feature to toggle between light and dark themes.
+This project implements an aesthetic digital desktop clock using HTML, CSS, and JavaScript. It also includes a feature to toggle between light and dark themes.
 
 ## Table of Contents
 
