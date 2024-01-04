@@ -45,7 +45,6 @@ function handleKeyPress(event) {
 // Add event listener for keydown events
 document.addEventListener('keydown', handleKeyPress);
 
-
 // Event listener for window load
 window.addEventListener('load', () => {
     const flashText = document.getElementById('flashText');
@@ -59,7 +58,9 @@ window.addEventListener('load', () => {
     document.addEventListener('keydown', handleKeyPress);
 
     // Event listener for fullscreen change
-    document.addEventListener('fullscreenchange', () => {
+    document.addEventListener('fullscreenchange', (event) => {
+        event.preventDefault(); // Prevent the default alert
+        
         if (document.fullscreenElement) {
             hideFlashText(); // Hide the flashing text when entering fullscreen
         }
