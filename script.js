@@ -45,21 +45,25 @@ function handleKeyPress(event) {
 // Add event listener for keydown events
 document.addEventListener('keydown', handleKeyPress);
 
-// Add this JavaScript code to your existing script
 
-// Function to hide the flashing text after a delay
+// Function to hide the flashing text
 function hideFlashText() {
     const flashText = document.getElementById('flashText');
-    setTimeout(() => {
-        flashText.style.display = 'none';
-    }, 2000); // Hide after 2 seconds (adjust as needed)
+    flashText.style.display = 'none';
+}
+
+// Function to handle spacebar key press
+function handleKeyPress(event) {
+    if (event.code === 'Space') {
+        hideFlashText(); // Hide the flashing text when spacebar is pressed
+        // Additional logic for fullscreen and toggle can go here if needed
+    }
 }
 
 // Event listener for window load
 window.addEventListener('load', () => {
     const flashText = document.getElementById('flashText');
-    hideFlashText(); // Hide the flashing text after a delay
 
-    // Add event listener for keydown events
+    // Event listener for keydown events
     document.addEventListener('keydown', handleKeyPress);
 });
