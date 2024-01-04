@@ -41,3 +41,22 @@ body {
 .theme-toggle img{
     width: 30px;
 }
+
+@keyframes flashing {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.flash-text {
+    font-size: 24px;
+    text-align: center;
+    animation: flashing 2s ease-in-out;
+    margin-bottom: 20px;
+}
