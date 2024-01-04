@@ -42,6 +42,8 @@ body {
     width: 30px;
 }
 
+/* Add this CSS to your existing stylesheet */
+
 @keyframes flashing {
     0% {
         opacity: 1;
@@ -54,9 +56,13 @@ body {
     }
 }
 
-.flash-text {
+#flashText {
     font-size: 24px;
     text-align: center;
-    animation: flashing 2s ease-in-out;
-    margin-bottom: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: flashing 2s ease-in-out infinite; /* Make the animation loop infinitely */
+    z-index: 9999; /* Ensure the text overlays everything else */
 }
