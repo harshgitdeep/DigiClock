@@ -58,10 +58,8 @@ function hideFlashText() {
 // Event listener for window load
 window.addEventListener('load', () => {
     const flashText = document.getElementById('flashText');
-    flashText.style.display = 'block'; // Display the flashing text initially
     hideFlashText(); // Hide the flashing text after a delay
 
     // Add event listener for keydown events
     document.addEventListener('keydown', handleKeyPress);
 });
-
