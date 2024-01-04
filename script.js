@@ -44,3 +44,24 @@ function handleKeyPress(event) {
 
 // Add event listener for keydown events
 document.addEventListener('keydown', handleKeyPress);
+
+// Add this JavaScript code to your existing script
+
+// Function to hide the flashing text after a delay
+function hideFlashText() {
+    const flashText = document.getElementById('flashText');
+    setTimeout(() => {
+        flashText.style.display = 'none';
+    }, 2000); // Hide after 2 seconds (adjust as needed)
+}
+
+// Event listener for window load
+window.addEventListener('load', () => {
+    const flashText = document.getElementById('flashText');
+    flashText.style.display = 'block'; // Display the flashing text initially
+    hideFlashText(); // Hide the flashing text after a delay
+
+    // Add event listener for keydown events
+    document.addEventListener('keydown', handleKeyPress);
+});
+
