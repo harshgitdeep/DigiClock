@@ -46,24 +46,22 @@ function handleKeyPress(event) {
 document.addEventListener('keydown', handleKeyPress);
 
 
-// Function to hide the flashing text
-function hideFlashText() {
-    const flashText = document.getElementById('flashText');
-    flashText.style.display = 'none';
-}
-
-// Function to handle spacebar key press
-function handleKeyPress(event) {
-    if (event.code === 'Space') {
-        hideFlashText(); // Hide the flashing text when spacebar is pressed
-        // Additional logic for fullscreen and toggle can go here if needed
-    }
-}
-
 // Event listener for window load
 window.addEventListener('load', () => {
     const flashText = document.getElementById('flashText');
+    
+    // Function to hide the flashing text
+    function hideFlashText() {
+        flashText.style.display = 'none';
+    }
 
-    // Event listener for keydown events
+    // Add event listener for keydown events
     document.addEventListener('keydown', handleKeyPress);
+
+    // Event listener for fullscreen change
+    document.addEventListener('fullscreenchange', () => {
+        if (document.fullscreenElement) {
+            hideFlashText(); // Hide the flashing text when entering fullscreen
+        }
+    });
 });
