@@ -24,3 +24,23 @@ setInterval(updateClock, 1000);
 
 // Call the updateClock function initially to display the clock immediately when the page loads
 updateClock();
+
+let isFullScreen = false;
+
+// Function to handle spacebar key press
+function handleKeyPress(event) {
+    if (event.code === 'Space') {
+        if (!isFullScreen) {
+            document.documentElement.requestFullscreen(); // Enter fullscreen mode
+            document.getElementById('theme-toggle').style.display = 'none'; // Hide the toggle button
+            isFullScreen = true;
+        } else {
+            document.exitFullscreen(); // Exit fullscreen mode
+            document.getElementById('theme-toggle').style.display = 'block'; // Show the toggle button
+            isFullScreen = false;
+        }
+    }
+}
+
+// Add event listener for keydown events
+document.addEventListener('keydown', handleKeyPress);
