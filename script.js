@@ -1,14 +1,13 @@
-// Function to update the clock display in 12-hour format
+// Function to update the clock display in 12-hour format without AM/PM
 function updateClock() {
     const now = new Date();
     let hours = now.getHours();
-    const ampm = hours >= 12 ? 'PM' : 'AM';
 
     // Convert to 12-hour format
     hours = hours % 12 || 12;
 
     const minutes = now.getMinutes().toString().padStart(2, '0');
-    const timeString = `${hours}:${minutes} ${ampm}`;
+    const timeString = `${hours}:${minutes}`;
 
     // Update the clock element's text content with the current time
     document.getElementById('clock').textContent = timeString;
