@@ -25,7 +25,7 @@ This project implements an aesthetic digital desktop clock using HTML, CSS, and 
 1. Clone the repository to your local machine:
 
 ```
-git clone https://github.com/yourusername/digital-clock.git
+git clone https://github.com/harshgitdeep/DigiClock.git
 ```
 
 2. Open the project folder.
